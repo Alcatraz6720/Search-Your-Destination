@@ -1,0 +1,68 @@
+
+<%- include("partials/header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cen.css">
+
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <% for (var i = searchItems.length-1; i < searchItems.length; i++) {%>
+
+    <table class="center">
+  <tr>
+    <th>Name</th>
+    <th>State Name</th>
+    <th>Maximum Temparature(Degree Celcius)</th>
+    <th>Minimum Temparature(Degree Celcius)</th>
+    <th>Humidity(%)</th>
+    <th>Nearest Bus Stand</th>
+    <th>Nearest Railway Station</th>
+    <th>Airport Name</th>
+    <th>Nearest School Name</th>
+    <th>Nearest College Name</th>
+    <th>Crime Rate(%)</th>
+    <th>Sexual Harrassment Rate(%)</th>
+    <th>Proverty Rate(%)</th>
+    <th>Population Rate(%)</th>
+    <th>Education Rate(%)</th>
+  </tr>
+  <tr>
+    <td><%= searchItems[i].name %></td>
+    <td><%=  searchItems[i].state %></td>
+    <td><%=  searchItems[i].max_temp %></td>
+    <td><%=  searchItems[i].min_temp %></td>
+    <td><%=  searchItems[i].humidity %></td>
+    <td><%=  searchItems[i].bus_stand %></td>
+    <td><%=  searchItems[i].railway_station %></td>
+    <td><%=  searchItems[i].airport_name %></td>
+    <td><%=  searchItems[i].scl_name %></td>
+    <td><%=  searchItems[i].college_name %></td>
+    <td><%=  searchItems[i].crime_rate %></td>
+    <td><%=  searchItems[i].sexual_harrassment %></td>
+    <td><%=  searchItems[i].proverty %></td>
+    <td><%=  searchItems[i].population %></td>
+    <td><%=  searchItems[i].education_rate %></td>
+  </tr>
+
+</table>
+<% }; %>
+
+  </body>
+</html>
